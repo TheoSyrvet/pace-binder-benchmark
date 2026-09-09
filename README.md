@@ -134,6 +134,13 @@ The pipeline targets a SLURM cluster with GPU partitions, running Rocky Linux 9.
 twelve hour wall time limit per job makes resumable scripts a requirement rather
 than a convenience, and the 20 targets are indexed 1 to 20 through job arrays.
 
+The tools in the benchmark depend on mutually incompatible software stacks, so each
+stage runs in its own conda environment. Exported specifications for all eight sit
+under env/conda and are recreated with conda env create. Backbone generation uses
+rfdiffusion and SE3nv, sequence design and its AlphaFold2 validation use
+af2_binder_design, the remaining generative tools use BindCraft and boltzgen, PACE
+refolding uses openfold3, and the dynamics stage uses gmxmmpbsa and mdanalysis.
+
 Two environment variables must be set.
 
 ```bash
