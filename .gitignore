@@ -1,0 +1,36 @@
+# Resultats et donnees lourdes, jamais versionnes
+results/
+runs/
+outputs/
+*.pdb
+*.cif
+*.a3m
+*.xtc
+*.trr
+*.edr
+*.tpr
+*.npz
+*.pkl
+*.pt
+*.pth
+
+# Sorties de jobs
+slurm-*.out
+*.log
+*.err
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+
+# Environnements et conteneurs construits
+env/venv/
+*.sif
+*.simg
+
+# Sauvegardes et systeme
+*.bak*
+*~
+.DS_Store
