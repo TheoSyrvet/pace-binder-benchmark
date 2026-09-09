@@ -34,3 +34,7 @@ env/venv/
 *.bak*
 *~
 .DS_Store
+
+# logs de jobs, on garde le dossier pas le contenu
+logs/*
+!logs/.gitkeep
